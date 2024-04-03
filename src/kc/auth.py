@@ -38,7 +38,7 @@ async def get_payload(token=Depends(get_jwttoken)) -> dict:
                 "verify_exp": True
             }
         )
-    except Exception as e:
+    except Exception as e: 
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail=str(e),
